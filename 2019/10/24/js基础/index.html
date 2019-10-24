@@ -15,15 +15,15 @@
     <meta name="keywords" content="js," />
   
 
-  <meta name="description" content="基础语法 js中的注释 1234&#x2F;&#x2F;这是单行注释 &#x2F;*这是多行注释*&#x2F; 语句   一条语句结束需要加分号（现在的js版本也可以不写） 一行写多条语句必须使用分号隔开 在控制台打印括号中的内容，功能和Python中的print差不多1console.log(&amp;apos;hello word&amp;apos;)">
+  <meta name="description" content="基础语法 js中的注释   1234&#x2F;&#x2F;这是单行注释 &#x2F;*这是多行注释*&#x2F;  语句   一条语句结束需要加分号（现在的js版本也可以不写） 一行写多条语句必须使用分号隔开 在控制台打印括号中的内容，功能和Python中的print差不多  1console.log(&amp;apos;hello word&amp;apos;)  js没有缩进问题，用花括号表示一个代码块  123function print()&amp;">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js基础">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;24&#x2F;js%E5%9F%BA%E7%A1%80&#x2F;index.html">
 <meta property="og:site_name" content="酸菜">
-<meta property="og:description" content="基础语法 js中的注释 1234&#x2F;&#x2F;这是单行注释 &#x2F;*这是多行注释*&#x2F; 语句   一条语句结束需要加分号（现在的js版本也可以不写） 一行写多条语句必须使用分号隔开 在控制台打印括号中的内容，功能和Python中的print差不多1console.log(&amp;apos;hello word&amp;apos;)">
+<meta property="og:description" content="基础语法 js中的注释   1234&#x2F;&#x2F;这是单行注释 &#x2F;*这是多行注释*&#x2F;  语句   一条语句结束需要加分号（现在的js版本也可以不写） 一行写多条语句必须使用分号隔开 在控制台打印括号中的内容，功能和Python中的print差不多  1console.log(&amp;apos;hello word&amp;apos;)  js没有缩进问题，用花括号表示一个代码块  123function print()&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-24T01:29:54.227Z">
+<meta property="og:updated_time" content="2019-10-24T01:40:40.297Z">
 <meta name="twitter:card" content="summary">
 
   
@@ -234,14 +234,43 @@ ga('send', 'pageview');
   <div class="article-content">
     
       <h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><ol>
-<li>js中的注释 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是单行注释</span></span><br><span class="line"> <span class="comment">/*</span></span><br><span class="line"><span class="comment">这是多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
+<li>js中的注释 </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//这是单行注释</span><br><span class="line"> /*</span><br><span class="line">这是多行注释</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<ol start="2">
 <li>语句</li>
 </ol>
 <ul>
 <li>一条语句结束需要加分号（现在的js版本也可以不写）</li>
 <li>一行写多条语句必须使用分号隔开</li>
-<li>在控制台打印括号中的内容，功能和Python中的print差不多<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;hello word&apos;)</span><br></pre></td></tr></table></figure></li>
+<li>在控制台打印括号中的内容，功能和Python中的print差不多</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;hello word&apos;)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>js没有缩进问题，用花括号表示一个代码块</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function print()&#123;</span><br><span class="line">    console.log(&apos;hello JS&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>基本数据类型</li>
+</ol>
+<ul>
+<li>Number（数字）</li>
+<li>String（字符串）</li>
+<li>Boolean(布尔)</li>
+<li>Array（数组）</li>
+<li>Object（对象）</li>
+<li>Function（函数）</li>
+<li>null</li>
+<li>undefined</li>
+</ul>
+<p><em>number数字类型</em></p>
+<ul>
+<li>在JS中除了传统的数字，NaN也是number类型的值 <blockquote>
+<p>NaN：not a number 不是一个数，但是属于number类型的<br>isNaN：这个方法是用来检测当前的值是否不是一个有效数字的，如果检测的值不是有效数字返回TRUE，是有效数字返回FALSE,isNaN在检测的时候，浏览器会默认的调用number方法把其他类型转化为数值类型</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">console.log(isNaN(NaN));//=&gt;TRUE</span><br><span class="line">console.log(isNaN(1));//=&gt;FALSE</span><br><span class="line">console.log(isNaN(&apos;1&apos;));//=&gt;FALSE 它是有效数字:当浏览器发现我们检测的值不是NUMBER类型的时候,首先会默认的把值转换为NUMBER类型,然后再验证是否是有效的数字  &apos;1&apos;-&gt;1  isNaN(1)-&gt;false</span><br><span class="line">console.log(isNaN(true));//=&gt;首先把布尔类型转换为数字 TRUE-&gt;1 FALSE-&gt;0  最后的结果是isNaN(1)-&gt;false</span><br><span class="line">console.log(isNaN(false));//=&gt;FALSE</span><br><span class="line">console.log(isNaN(null));//=&gt;NULL转换为数字0 =&gt;FALSE</span><br><span class="line">console.log(isNaN(undefined));//=&gt;UNDEFINED转换为数字的NaN =&gt;TRUE</span><br></pre></td></tr></table></figure>
 
     
   </div>
