@@ -1,0 +1,15 @@
+body{
+    background: #dcb9dc;
+}
+.page-header{
+    background: none;
+}
+.content{
+    border-left:4px solid #dcb9dc;
+}
+.slogan{
+    color: #ffffff !important;
+}
+.item-post .post-date{
+    color: #ffffff
+}
