@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 
 
-  <html class="light page-tagsjs基础">
+  <html class="light page-object">
 
 
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: js基础 | 酸菜の笔记</title>
+  <title>字符串中的方法 | 酸菜の笔记</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="lizhihong1,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+    <meta name="keywords" content="js基础," />
   
 
-  <meta name="description" content="my blog">
-<meta name="keywords" content="my blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="酸菜の笔记">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;js%E5%9F%BA%E7%A1%80&#x2F;index.html">
+  <meta name="description" content="在JS中用单&#x2F;双引号包裹起来的都是字符串 字符串就是由0-多个字符组成的字串 1.以数字为索引，从零开始 2.有length属性，存储的是当前字符串中字符的个数（字符串的长度） charAt &amp;amp;&amp;amp; charCodeAt str.charAt(索引)：返回指定位置的字符字符串可以用[]访问单个字符，为什么还要用charAt()?区别如下：   str[index]，IE7及以下不兼容">
+<meta name="keywords" content="js基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串中的方法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95&#x2F;index.html">
 <meta property="og:site_name" content="酸菜の笔记">
-<meta property="og:description" content="my blog">
+<meta property="og:description" content="在JS中用单&#x2F;双引号包裹起来的都是字符串 字符串就是由0-多个字符组成的字串 1.以数字为索引，从零开始 2.有length属性，存储的是当前字符串中字符的个数（字符串的长度） charAt &amp;amp;&amp;amp; charCodeAt str.charAt(索引)：返回指定位置的字符字符串可以用[]访问单个字符，为什么还要用charAt()?区别如下：   str[index]，IE7及以下不兼容">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-06T07:15:04.866Z">
 <meta name="twitter:card" content="summary">
 
   
@@ -95,17 +96,8 @@ ga('send', 'pageview');
     <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
   
 
-  <div class="content content-tag">
-  <div class="page-header">
-
-  
-    <div class="breadcrumb">
-      <div class="location">标签</div>
-      <i class="icon-location"></i>
-    </div>
-  
-
-  
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
     <a class="toolbox-entry" href="/">
       <span class="toolbox-entry-text">盒子</span>
@@ -195,139 +187,122 @@ ga('send', 'pageview');
   </div>
 
 
+</div>
 
-  <div class="box-blog-info">
-    <a class="avatar" href="/">
-      <img src="/images/avatar.jpg" alt="" />
-    </a>
-    <div class="info">
-      <h3 class="name" style="font-family: calligraffittiregular">
-        酸菜
-      </h3>
-      <div class="slogan">
-        Find the bug of the world
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#charAt-amp-amp-charCodeAt"><span class="toc-text">charAt &amp;&amp; charCodeAt</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="object-字符串中的方法" class="article article-type-object" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">字符串中的方法</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.11.06</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Lee</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p><code>在JS中用单/双引号包裹起来的都是字符串
+字符串就是由0-多个字符组成的字串
+1.以数字为索引，从零开始
+2.有length属性，存储的是当前字符串中字符的个数（字符串的长度）</code></p>
+<h4 id="charAt-amp-amp-charCodeAt"><a href="#charAt-amp-amp-charCodeAt" class="headerlink" title="charAt &amp;&amp; charCodeAt"></a><code>charAt &amp;&amp; charCodeAt</code></h4><blockquote>
+<p>str.charAt(索引)：返回指定位置的字符<br><strong><font color=red>字符串可以用[]访问单个字符，为什么还要用charAt()?区别如下：<font></strong></p>
+</blockquote>
+<ul>
+<li>str[index]，IE7及以下不兼容，index超不超出字符串的长度都会返回undefined；</li>
+<li>str.charAt(index)：对于超出index 范围的值，会返回空字符串，IE6-8兼容<br>str.charCodeAt(索引)：返回指定位置字符的Unicode编码值（对应ASCII码表）<br>String.fromCharCode(十进制的Unicode值)：把Unicode值转换为对应的字符</li>
+</ul>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持lizhihong1</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="" alt="">
+          </li>
+        
+        </ul>
       </div>
     </div>
   </div>
 
-</div>
 
-  <section class="tag-box">
-  <div class="tag-title">标签</div>
-  <div class="tag-list">
-    
-      <a class="tag-item" href="#Date">
-        <span class="tag-name">Date</span>
-        <span class="tag-size">( 1 )</span>
-      </a>
-    
-      <a class="tag-item" href="#html基础">
-        <span class="tag-name">html基础</span>
-        <span class="tag-size">( 1 )</span>
-      </a>
-    
-      <a class="tag-item" href="#js基础">
-        <span class="tag-name">js基础</span>
-        <span class="tag-size">( 2 )</span>
-      </a>
-    
-      <a class="tag-item" href="#js常用操作语句">
-        <span class="tag-name">js常用操作语句</span>
-        <span class="tag-size">( 1 )</span>
-      </a>
-    
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/10/24/Date%E6%97%A5%E6%9C%9F/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
   </div>
-</section>
-
-  <ul class="list-post"><li id="Date" class="item-category-name item-title item-title-0">
-  <!--
-    <a href="" class="text-year">
-   -->
-    Date
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">10-24</span>
-
-  
-  <a class="post-title" href="/2019/10/24/Date%E6%97%A5%E6%9C%9F/">Date日期</a>
 
 
-</li>
-<li id="html基础" class="item-category-name item-title item-title-1">
-  <!--
-    <a href="" class="text-year">
-   -->
-    html基础
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">10-23</span>
-
-  
-  <a class="post-title" href="/2019/10/23/html%E5%9F%BA%E7%A1%80/">html基础</a>
 
 
-</li>
-<li id="js基础" class="item-category-name item-title item-title-2">
-  <!--
-    <a href="" class="text-year">
-   -->
-    js基础
-    <span class="category-count">( 2 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">11-06</span>
-
-  
-  <a class="post-title" href="/2019/11/06/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95/">字符串中的方法</a>
-
-
-</li>
-<li class="item-post item">
-  <span class="post-date">10-24</span>
-
-  
-  <a class="post-title" href="/2019/10/24/js%E5%9F%BA%E7%A1%80/">js基础</a>
-
-
-</li>
-<li id="js常用操作语句" class="item-category-name item-title item-title-3">
-  <!--
-    <a href="" class="text-year">
-   -->
-    js常用操作语句
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">10-24</span>
-
-  
-  <a class="post-title" href="/2019/10/24/js%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AF%AD%E5%8F%A5/">js常用操作语句</a>
-
-
-</li>
-</ul>
 </div>
 
 
   <a id="backTop" class="back-top">
     <i class="icon-angle-up"></i>
   </a>
-
-
 
 
 
@@ -426,6 +401,50 @@ ga('send', 'pageview');
 </div>
 
 
+
+  
+      <div class="fexo-comments comments-object">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script>
+const gitalk = new Gitalk({
+  clientID: '277317290454635afa73',
+  clientSecret: '78223c859304da5e8d71bfce136d436c6ff95c37',
+  repo: 'blog-comment',
+  owner: 'lizhihong1',
+  // 在这里设置一下截取前50个字符串, 这是因为 github 对 label 的长度有了要求, 如果超过
+  // 50个字符串则会报错.
+  // id: location.pathname.split('/').pop().substring(0, 49),
+  id: md5(location.pathname),
+  admin: ['lizhihong1'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
 
   
 
