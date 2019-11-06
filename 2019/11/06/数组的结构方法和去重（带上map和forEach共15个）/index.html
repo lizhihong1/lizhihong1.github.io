@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="酸菜の笔记">
 <meta property="og:description" content="数组也是对象数据类型的-&amp;gt;’object’数组也有属性名，只不过属性名是数字，我们把数字属性名叫做索引类数组：类似于数组，但是不是数组  数组中常用的方法 1.方法的意义和作用2.方法需要的参数3.方法的返回值4.方法执行后原有数组是否改变  数组的增删   方法名 含义 参数 返回值 原有数组是否改变    unshift 将数据添加到一个数组的开头 新增加的内容 新增后数组的最新长度">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-06T07:36:48.912Z">
+<meta property="og:updated_time" content="2019-11-06T07:59:21.862Z">
 <meta name="twitter:card" content="summary">
 
   
@@ -192,7 +192,7 @@ ga('send', 'pageview');
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组中常用的方法"><span class="toc-text">数组中常用的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的增删"><span class="toc-text">数组的增删</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的修改"><span class="toc-text">数组的修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的拼接"><span class="toc-text">数组的拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#验证数组中是否包含某一项"><span class="toc-text">验证数组中是否包含某一项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#遍历数组中的每一项（ES5独有IE6-8不兼容）"><span class="toc-text">遍历数组中的每一项（ES5独有IE6-8不兼容）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6中新增的数组方法"><span class="toc-text">ES6中新增的数组方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的去重"><span class="toc-text">数组的去重</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#冒泡排序"><span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快速排序"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序法"><span class="toc-text">插入排序法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组排序-去重-自己总结的wihle循环方法"><span class="toc-text">数组排序+去重(自己总结的wihle循环方法)</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组中常用的方法"><span class="toc-text">数组中常用的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的增删"><span class="toc-text">数组的增删</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的修改"><span class="toc-text">数组的修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的查询"><span class="toc-text">数组的查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的拼接"><span class="toc-text">数组的拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的转化"><span class="toc-text">数组的转化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的排序"><span class="toc-text">数组的排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#验证数组中是否包含某一项"><span class="toc-text">验证数组中是否包含某一项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#遍历数组中的每一项（ES5独有IE6-8不兼容）"><span class="toc-text">遍历数组中的每一项（ES5独有IE6-8不兼容）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6中新增的数组方法"><span class="toc-text">ES6中新增的数组方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的去重"><span class="toc-text">数组的去重</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#冒泡排序"><span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快速排序"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入排序法"><span class="toc-text">插入排序法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组排序-去重-自己总结的wihle循环方法"><span class="toc-text">数组排序+去重(自己总结的wihle循环方法)</span></a></li></ol>
   </div>
 
 
@@ -328,28 +328,18 @@ ga('send', 'pageview');
 <td align="center">被替换的的会以一个新数组返回</td>
 <td align="center">变</td>
 </tr>
+</tbody></table>
+<h4 id="数组的查询"><a href="#数组的查询" class="headerlink" title="数组的查询"></a><code>数组的查询</code></h4><table>
+<thead>
 <tr>
-<td align="center">#### <code>数组的查询</code></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<th align="center">方法名</th>
+<th align="center">含义</th>
+<th align="center">参数</th>
+<th align="center">返回值</th>
+<th align="center">原有数组是否改变</th>
 </tr>
-<tr>
-<td align="center">方法名</td>
-<td align="center">含义</td>
-<td align="center">参数</td>
-<td align="center">返回值</td>
-<td align="center">原有数组是否改变</td>
-</tr>
-<tr>
-<td align="center">:——–:</td>
-<td align="center">:——-:</td>
-<td align="center">:——-:</td>
-<td align="center">:———:</td>
-<td align="center">:—————–:</td>
-</tr>
-<tr>
+</thead>
+<tbody><tr>
 <td align="center">slice(n,m)</td>
 <td align="center">从索引n开始找到m处(不包含m) <strong><code>注意</code></strong>：某一项的话需要用项数减一来获取索引</td>
 <td align="center">n,m</td>
@@ -398,28 +388,18 @@ ga('send', 'pageview');
 <td align="center">克隆后的数组</td>
 <td align="center">不变</td>
 </tr>
+</tbody></table>
+<h4 id="数组的转化"><a href="#数组的转化" class="headerlink" title="数组的转化"></a><code>数组的转化</code></h4><table>
+<thead>
 <tr>
-<td align="center">#### <code>数组的转化</code></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<th align="center">方法名</th>
+<th align="center">含义</th>
+<th align="center">参数</th>
+<th align="center">返回值</th>
+<th align="center">原有数组是否改变</th>
 </tr>
-<tr>
-<td align="center">方法名</td>
-<td align="center">含义</td>
-<td align="center">参数</td>
-<td align="center">返回值</td>
-<td align="center">原有数组是否改变</td>
-</tr>
-<tr>
-<td align="center">:——–:</td>
-<td align="center">:——-:</td>
-<td align="center">:——-:</td>
-<td align="center">:———:</td>
-<td align="center">:—————–:</td>
-</tr>
-<tr>
+</thead>
+<tbody><tr>
 <td align="center">toString()</td>
 <td align="center">把数组转换为字符串</td>
 <td align="center">无</td>
@@ -440,28 +420,18 @@ ga('send', 'pageview');
 <td align="center"></td>
 <td align="center"></td>
 </tr>
+</tbody></table>
+<h4 id="数组的排序"><a href="#数组的排序" class="headerlink" title="数组的排序"></a><code>数组的排序</code></h4><table>
+<thead>
 <tr>
-<td align="center">#### <code>数组的排序</code></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<th align="center">方法名</th>
+<th align="center">含义</th>
+<th align="center">参数</th>
+<th align="center">返回值</th>
+<th align="center">原有数组是否改变</th>
 </tr>
-<tr>
-<td align="center">方法名</td>
-<td align="center">含义</td>
-<td align="center">参数</td>
-<td align="center">返回值</td>
-<td align="center">原有数组是否改变</td>
-</tr>
-<tr>
-<td align="center">:——–:</td>
-<td align="center">:——-:</td>
-<td align="center">:——:</td>
-<td align="center">:———:</td>
-<td align="center">:—————–:</td>
-</tr>
-<tr>
+</thead>
+<tbody><tr>
 <td align="center">reverse（）</td>
 <td align="center">用于颠倒数组中元素的顺序</td>
 <td align="center">无</td>
